@@ -11,12 +11,20 @@ import scene from "../scene";
 
 export default function createDirectionalLight() {
     const directionalLight = new THREE.DirectionalLight( 0xffffff, 0.125);
-    directionalLight.position.x = -0.04;
-    directionalLight.position.y = 0.22;
-    directionalLight.position.z = 0.13;
+    directionalLight.position.x = -40;
+    directionalLight.position.y = 20;
+    directionalLight.position.z = 13;
                     
     directionalLight.position.normalize();
-
+    directionalLight.castShadow = true;
+    directionalLight.shadow.mapSize.width = 1024; // 设置阴影贴图的大小
+    directionalLight.shadow.mapSize.height = 1024;
+    directionalLight.shadow.camera.near = 100; // 设置阴影摄像机的近距离和远距离
+    directionalLight.shadow.camera.far = 1000;
     console.log("平行光被加入")
-    scene.add( directionalLight );	
+    scene.add( directionalLight );
+    
+    const helper = new THREE.PointLightHelper(directionalLight);
+    console.log("辅助器被加入")
+    scene.add(helper);
 }	

@@ -16,7 +16,7 @@ const scene = new THREE.Scene();
 //   "6.jpg",
 // ]);
 
-const bc = new Color("black");
+const bc = new Color("skyblue");
 scene.background = bc;
 // scene.background = textureCube;
 // scene.environment = textureCube;

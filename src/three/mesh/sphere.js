@@ -6,8 +6,9 @@ export default function createSphere() {
         new THREE.SphereGeometry( 1, 32, 16 ),
         new THREE.MeshLambertMaterial( { color: 0xdddddd } ) ,
     )
-    sphere.position.set(5,0,5);
-    sphere.receiveShadows = true;
-
+    sphere.position.set(2,0.5,5);
+    sphere.castShadow = true;
+    sphere.receiveShadow = true;
+    
     return sphere;
 }

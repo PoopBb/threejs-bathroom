@@ -1,16 +1,15 @@
 //测试方块
 import * as THREE from "three";
 
-export default function createCube() {
+export default function createBathtub() {
     const cube = new THREE.Mesh(
-        new THREE.BoxGeometry(20, 20, 5),
+        new THREE.BoxGeometry(5, 5, 5),
         new THREE.MeshLambertMaterial(
             { color: 0xdddddd }
     ),
     )
     cube.position.set(0,0,0);
-    cube.receiveShadow = true;
-    cube.castShadow = true;
+    cube.receiveShadows = true;
 
     return cube;
 }
