@@ -5839,7 +5839,12 @@
     "neo-async" "^2.6.2"
     "schema-utils" "^3.0.0"
 
-"three@^0.143.0":
+"three-gltf-loader@^1.111.0":
+  "integrity" "sha512-f2d6J5sMEC+dvRcpRjE8g9vqtvpNfnR7bgd+R7Y0dj2mmHwKN5luKe/WYA0Z9+j7mhjla/AC5DGxdXsu8wFhug=="
+  "resolved" "https://registry.npmjs.org/three-gltf-loader/-/three-gltf-loader-1.111.0.tgz"
+  "version" "1.111.0"
+
+"three@^0.143.0", "three@>=0.111.0":
   "integrity" "sha512-oKcAGYHhJ46TGEuHjodo2n6TY2R6lbvrkp+feKZxqsUL/WkH7GKKaeu6RHeyb2Xjfk2dPLRKLsOP0KM2VgT8Zg=="
   "resolved" "https://registry.npmjs.org/three/-/three-0.143.0.tgz"
   "version" "0.143.0"

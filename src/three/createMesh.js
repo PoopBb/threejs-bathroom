@@ -4,9 +4,10 @@ import scene from './scene';
 import ground from './mesh/ground';
 import createCube from './mesh/cube';
 import createSphere from './mesh/sphere';
+import createBathTube from './mesh/bathtub';
 
 // import createCube from './mesh/cube';
 export default function createMesh() {
   scene.add(ground);
-  return {createCube, createSphere, ground}
+  return {createCube, createSphere, createBathTube, ground}
 }

@@ -12,8 +12,6 @@ import { onMounted, ref} from 'vue';
 import scene from "@/three/scene";
 //导入相机
 import camera from "@/three/camera";
-// 导入GUI
-import * as dat from "dat.gui"
 //导入渲染器
 import renderer from "@/three/renderer";
 //导入每一帧执行函数
@@ -22,8 +20,8 @@ import animate from "@/three/animate";
 import axesHelper from "@/three/axesHelper";
 //导入初始化调整屏幕
 import "@/three/init";
-//导入控制器
-import controls from "@/three/controls";
+// //导入控制器
+// import controls from "@/three/controls";
 //导入物体
 import createMesh from "@/three/createMesh";
 //导入灯光
@@ -32,8 +30,7 @@ import createLight from '@/three/createLight';
 
 //场景元素div
 let sceneDiv = ref(null);
-//GUI
-const gui = new dat.GUI();
+
 //添加相机
 scene.add(camera);
 //添加辅助坐标轴

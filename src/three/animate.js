@@ -6,12 +6,12 @@ import controls from "./controls";
 import scene from "./scene";
 import createMesh from "./createMesh";
 import * as dat from "dat.gui"
-import { Color } from "three";
+
 
 const gui = new dat.GUI();
-const clock = new THREE.Clock();
 var mesh = createMesh().createCube();
 var mesh1 = createMesh().createSphere();
+var bath001 = createMesh().createBathTube();
 
 const params = {
   color: "#ffffff",
@@ -50,35 +50,70 @@ const params = {
     });
     // =============================================
   },
-  animatePause:() => {
-    window.addEventListener("dblclick", () => {
-      if(animate01.isActive()) {
-        animate01.pause();
-      } else {
-        animate01.resume();
-      }
-    });
-  }
+  // animatePause:() => {
+  //   window.addEventListener("dblclick", () => {
+  //     if(animate01.isActive()) {
+  //       animate01.pause();
+  //     } else {
+  //       animate01.resume();
+  //     }
+  //   });
+  // }
 };
 
 // GUI 折叠筐
 var floder = gui.addFolder("设置方块");
 floder.add(mesh.material, "wireframe").name("设置线框");
 
-//GUI 设置
+//物体位置 setting
 floder
   .add(mesh.position, "x")
   .min(0)
   .max(5)
   .step(0.01)
   .name("x位置")
+floder
+  .add(mesh.position, "y")
+  .min(0)
+  .max(5)
+  .step(0.01)
+  .name("y位置")
+floder
+  .add(mesh.position, "z")
+  .min(0)
+  .max(5)
+  .step(0.01)
+  .name("z位置")
 
+//物体大小 setting
+floder
+  .add(mesh.scale, "x")
+  .min(0)
+  .max(5)
+  .step(0.01)
+  .name("x大小")
+floder
+  .add(mesh.scale, "y")
+  .min(0)
+  .max(5)
+  .step(0.01)
+  .name("y大小")
+floder
+  .add(mesh.scale, "z")
+  .min(0)
+  .max(5)
+  .step(0.01)
+  .name("z大小")
+
+//物体颜色 setting
 floder.addColor(params, "color").onFinishChange((value) => {
   mesh.material.color.set(value);
 })
 
+//物体显示 setting
 floder.add(mesh, "visible").name("显示方块");
 
+//物体运动 setting
 floder.add(params, "animateStart").name("方块运动");
 
 
@@ -95,7 +130,7 @@ function animate(currentTime) {
 
   if (elapsedTime > frameDelay) {
     controls.update();
-    scene.add(mesh, mesh1);
+    scene.add(mesh, bath001);
     renderer.render(scene, camera);
 
     lastFrameTime = currentTime;

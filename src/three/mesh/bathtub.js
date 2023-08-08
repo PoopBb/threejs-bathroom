@@ -1,15 +1,20 @@
-//测试方块
+//测试模型
 import * as THREE from "three";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
-export default function createBathtub() {
-    const cube = new THREE.Mesh(
-        new THREE.BoxGeometry(5, 5, 5),
-        new THREE.MeshLambertMaterial(
-            { color: 0xdddddd }
-    ),
-    )
-    cube.position.set(0,0,0);
-    cube.receiveShadows = true;
 
-    return cube;
-}
+export default function createBathTube() {
+    const object = new THREE.Object3D();
+  
+    const loader = new GLTFLoader();
+    loader.load("/models/bath001.glb", (gltf) => {
+      const model = gltf.scene;
+      object.add(model);
+    });
+  
+    object.position.set(0, 0, 0);
+    object.receiveShadows = true;
+    object.castShadow = true;
+  
+    return object;
+  }
