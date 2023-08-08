@@ -7,5 +7,6 @@ import createSphere from './mesh/sphere';
 
 // import createCube from './mesh/cube';
 export default function createMesh() {
-  scene.add(createCube, createSphere, ground);
+  scene.add(ground);
+  return {createCube, createSphere, ground}
 }
