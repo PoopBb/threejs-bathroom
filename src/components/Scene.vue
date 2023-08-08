@@ -28,6 +28,7 @@ import controls from "@/three/controls";
 import createMesh from "@/three/createMesh";
 //导入灯光
 import createLight from '@/three/createLight';
+//gasp动画库
 
 //场景元素div
 let sceneDiv = ref(null);

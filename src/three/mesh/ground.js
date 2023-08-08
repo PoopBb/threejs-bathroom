@@ -10,7 +10,7 @@ const groundMat = new THREE.MeshStandardMaterial(
 groundMat.side = THREE.DoubleSide;
 const ground = new THREE.Mesh(groundGeo, groundMat);
 
-ground.position.set(0,0,0);
+ground.position.set(0,-2,0);
 ground.rotation.x = Math.PI / 2;
 ground.receiveShadow = true;
 
