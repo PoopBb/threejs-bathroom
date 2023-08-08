@@ -45,7 +45,6 @@ onMounted(()=>{
 
   sceneDiv.value.appendChild(renderer.domElement);
   animate();
-  
 })
 
 </script>

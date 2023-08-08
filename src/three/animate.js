@@ -8,31 +8,36 @@ import createCube from "./mesh/cube";
 import createSphere from "./mesh/sphere";
 
 const clock = new THREE.Clock();
-const mesh = createCube();
-const mesh1 = createSphere();
+var mesh = createCube();
+var mesh1 = createSphere();
 
 
 function animate() {
   controls.update();
-  renderer.render(scene, camera);
-
-  // Animate the mesh position along the x-axis using GSAP
-  
-    gsap.to(mesh.position, {
-      x: -20,
-      duration: 1,
-      repeat: -1,
-      yoyo: true,
-      ease: "power1.inOut"
-    });
-  window.addEventListener("dblclick", ()=>{
-    console.log(mesh);
-    mesh.pause();
-  })
-  
-  console.log(mesh.position)
   scene.add(mesh, mesh1);
+  renderer.render(scene, camera);
 }
+
+var animate01 = gsap.to(mesh.position, {
+  x: 5,
+  duration: 1,
+  ease: "power1.inOut",
+  repeat: -1,
+  yoyo: true,
+  delay: 2,
+  onComplete: () => {
+    console.log("动画完成")
+  },
+  onStart: () => {
+    console.log("动画开始")
+  },
+  
+});
+
+window.addEventListener("dblclick", () => {
+  console.log("click")
+  animate01.pause;
+});
 
 function render() {
   animate();
