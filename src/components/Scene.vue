@@ -13,7 +13,7 @@ import scene from "@/three/scene";
 //导入相机
 import camera from "@/three/camera";
 // 导入GUI
-import gui from "@/three/gui";
+import * as dat from "dat.gui"
 //导入渲染器
 import renderer from "@/three/renderer";
 //导入每一帧执行函数
@@ -32,6 +32,8 @@ import createLight from '@/three/createLight';
 
 //场景元素div
 let sceneDiv = ref(null);
+//GUI
+const gui = new dat.GUI();
 //添加相机
 scene.add(camera);
 //添加辅助坐标轴
@@ -42,7 +44,6 @@ createMesh();
 createLight();
 
 onMounted(()=>{
-
   sceneDiv.value.appendChild(renderer.domElement);
   animate();
 })
@@ -54,8 +55,13 @@ onMounted(()=>{
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 100;
+  z-index: 0;
   left: 0;
   top: 0;
+}
+
+.gui-container {
+  position: relative;
+  z-index: 1;
 }
 </style>
