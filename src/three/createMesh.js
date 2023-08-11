@@ -5,9 +5,16 @@ import ground from './mesh/ground';
 import createCube from './mesh/cube';
 import createSphere from './mesh/sphere';
 import createBathTube from './mesh/bathtub';
+import createAI from './mesh/aiGuide';
 
 // import createCube from './mesh/cube';
 export default function createMesh() {
   scene.add(ground);
-  return {createCube, createSphere, createBathTube, ground}
+  return {
+    createAI,
+    createCube, 
+    createSphere, 
+    createBathTube, 
+    ground
+  }
 }

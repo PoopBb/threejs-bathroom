@@ -2,7 +2,10 @@
 <!-- eslint-disable no-unused-vars -->
 
 <template>
-  <div class="scene" ref="sceneDiv"></div>
+  <div class="scene" ref="sceneDiv">
+    <button id="model1Button">Model 1</button>
+    <button id="model2Button">Model 2</button>
+  </div>
 </template>
 
 <script setup>
@@ -27,6 +30,7 @@ import createMesh from "@/three/createMesh";
 //导入灯光
 import createLight from '@/three/createLight';
 //gasp动画库
+import createGUI from '@/three/gui';
 
 //场景元素div
 let sceneDiv = ref(null);

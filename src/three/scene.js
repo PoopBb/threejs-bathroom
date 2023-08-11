@@ -16,10 +16,12 @@ const scene = new THREE.Scene();
 //   "6.jpg",
 // ]);
 
-const bc = new Color("skyblue");
+const bc = new Color("white");
 scene.background = bc;
+// scene.background = null;
 // scene.background = textureCube;
 // scene.environment = textureCube;
+scene.fog = new THREE.Fog(bc, 60, 100);
 
 
 export default scene;

@@ -3,8 +3,8 @@ import * as THREE from "three";
 // 创建透视相机
 const camera = new THREE.PerspectiveCamera(
   75,
-  window.innerHeight / window.innerHeight,
-  1,
+  window.innerHeight / window.innerWidth,
+  0.01,
   50000
 );
 // 设置相机位置

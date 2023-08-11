@@ -5,10 +5,8 @@ import * as THREE from "three";
 import scene from "../scene";
 
 export default function createPointLight(){
-    const pointLight = new THREE.PointLight( 0xffffff, 1 );
-	pointLight.position.x = 0.0;
-	pointLight.position.y = 20.0;
-	pointLight.position.z = 20.0;	
+    const pointLight = new THREE.PointLight( 0xffffff, 1, 100);
+	pointLight.position.set( 0, 10, 4 )
 
 	pointLight.castShadow = true;
 	pointLight.shadow.radius = 10
@@ -18,4 +16,10 @@ export default function createPointLight(){
 	const pointLightCameraHelper = new THREE.CameraHelper(pointLight.shadow.camera)
     scene.add(pointLightCameraHelper)
 
+	pointLight.shadow.mapSize.width = 512 * 2; 
+	pointLight.shadow.mapSize.height = 512 * 2; 
+	pointLight.shadow.bias = 0.05;
+	pointLight.shadow.normalBias = 0.05;
+	pointLight.shadow.camera.near = 0.5; 
+	pointLight.shadow.camera.far = 500; 
 }
