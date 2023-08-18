@@ -6,7 +6,7 @@ import * as THREE from "three";
 import scene from "../scene";
 
 export default function createAmbientLight(){
-    const ambitionLight = new THREE.AmbientLight( 0xffffff ); // soft white light
+    const ambitionLight = new THREE.AmbientLight( 0xffffff , 2); // soft white light
     console.log("环境光被加入");
     scene.add( ambitionLight );
 }

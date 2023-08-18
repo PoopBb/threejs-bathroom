@@ -11,12 +11,6 @@ export default function createBathTube() {
     const loader = new GLTFLoader();
     loader.load("/models/porsche_911_turbo/scene.gltf", (gltf) => {
       console.log(gltf);
-      const model1Button = document.getElementById("model1Button");
-      const handleModel1Click = () => {
-        console.log("Model 1按钮被点击了");
-        // 在此处执行与Model 1相关的操作
-      };
-      model1Button.addEventListener("click", handleModel1Click);
       addEventListener
       // 模型加载完成后，移除加载动画
       scene.remove(loadingAnimation);

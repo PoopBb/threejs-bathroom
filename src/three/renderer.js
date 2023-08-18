@@ -7,11 +7,11 @@ const renderer = new THREE.WebGLRenderer({
   // logarithmicDepthBuffer: true,
 });
 renderer.physicallyCorrectLights = true;
-// renderer.setPixelRatio( window.devicePixelRatio * 2);
+renderer.setPixelRatio( window.devicePixelRatio * 1.5);
 renderer.setSize(window.innerWidth,window.innerHeight);
 renderer.gammaOutput = true;
-renderer.shadowMap.enabled = true;
-renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+// renderer.shadowMap.enabled = true;
+// renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 1.0;
 export default renderer;

@@ -19,4 +19,5 @@ window.addEventListener("resize", () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
   //   设置渲染器的像素比例
   renderer.setPixelRatio(window.devicePixelRatio);
+  
 });

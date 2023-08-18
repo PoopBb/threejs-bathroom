@@ -1,0 +1,11 @@
+Model Information:
+* title:	Anita - Female Character
+* source:	https://sketchfab.com/3d-models/anita-female-character-9fa7d23442aa4c4ebf0795e3a998484a
+* author:	karma (https://sketchfab.com/mikejimmyalmeida)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Anita - Female Character" (https://sketchfab.com/3d-models/anita-female-character-9fa7d23442aa4c4ebf0795e3a998484a) by karma (https://sketchfab.com/mikejimmyalmeida) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

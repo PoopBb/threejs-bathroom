@@ -7,20 +7,15 @@ import scene from "../scene";
 
 export default function createAI() {
     const object = new THREE.Object3D();
-  
     const loader = new GLTFLoader();
-    loader.load("/models/scifi_girl/scene.gltf", (gltf) => {
+
+    // loader.load("/models/Xbot.glb", (gltf) => {
+    loader.load("/models/anita_-_female_character/scene.gltf", (gltf) => {
+    // loader.load("/models/scifi_girl/scene.gltf", (gltf) => {
       console.log(gltf);
-      const model1Button = document.getElementById("model1Button");
-      const handleModel1Click = () => {
-        console.log("Model 1按钮被点击了");
-        // 在此处执行与Model 1相关的操作
-      };
-      model1Button.addEventListener("click", handleModel1Click);
       addEventListener
       // 模型加载完成后，移除加载动画
       scene.remove(loadingAnimation);
-
       const model = gltf.scene;
 
       // 遍历模型的所有材质
@@ -41,13 +36,14 @@ export default function createAI() {
       object.add(model);
     });
   
-    object.position.set(-8, 0, 4);
-    object.rotateY = Math.PI / 2;
-    object.scale.set(3,3,3)
+    object.position.set(-10, 5, 4);
+    object.rotation.set(0, 1, 0);
+    object.scale.set(5,5,5)
     object.receiveShadows = true;
     object.castShadow = true;
 
     scene.add(object);
   
+    
     return object;
   }

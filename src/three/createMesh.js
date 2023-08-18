@@ -3,7 +3,6 @@ import scene from './scene';
 // import helper from '@/three/mesh/plane'
 import ground from './mesh/ground';
 import createCube from './mesh/cube';
-import createSphere from './mesh/sphere';
 import createBathTube from './mesh/bathtub';
 import createAI from './mesh/aiGuide';
 
@@ -13,8 +12,6 @@ export default function createMesh() {
   return {
     createAI,
     createCube, 
-    createSphere, 
     createBathTube, 
-    ground
   }
 }

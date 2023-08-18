@@ -3,8 +3,8 @@
 
 <template>
   <div class="scene" ref="sceneDiv">
-    <button id="model1Button">Model 1</button>
-    <button id="model2Button">Model 2</button>
+    <!-- <button id="model1Button">Model 1</button>
+    <button id="model2Button">Model 2</button> -->
   </div>
 </template>
 
@@ -38,7 +38,7 @@ let sceneDiv = ref(null);
 //添加相机
 scene.add(camera);
 //添加辅助坐标轴
-scene.add(axesHelper);
+// scene.add(axesHelper);
 //添加物体
 createMesh();
 //添加灯光
